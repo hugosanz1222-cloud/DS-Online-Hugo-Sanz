@@ -1,0 +1,30 @@
+DASHBOARD: TechZone - Análisis Comercial
+
+PREGUNTA DE NEGOCIO:
+¿Está creciendo el negocio y qué categorías de producto lo impulsan?
+
+KPI 1 - Ingresos totales
+Fórmula: SUM(line_total)
+Justificación: Es la métrica base de salud del negocio. Una caída indica
+un problema real de facturación que requiere investigación inmediata.
+
+KPI 2 - Número de pedidos
+Fórmula: COUNT_DISTINCT(order_id)
+Justificación: Mide el volumen real de actividad comercial. Combinado
+con los ingresos, permite detectar si el problema es de volumen o de
+ticket medio.
+
+KPI 3 - Ticket medio
+Fórmula: SUM(line_total) / COUNT_DISTINCT(order_id)
+Justificación: Indica el gasto medio por pedido, calculado sobre el
+total agregado para evitar distorsiones estadísticas.
+
+KPI 4 - Top categorías por ingresos
+Fórmula: SUM(line_total) agrupado por category_name
+Justificación: Identifica qué líneas de negocio generan más ingresos,
+orientando decisiones de stock, marketing e inversión.
+
+CONCLUSIÓN:
+El dashboard permite monitorizar en tiempo real la evolución de ingresos,
+pedidos y ticket medio, así como identificar las categorías de producto
+más rentables para TechZone.
